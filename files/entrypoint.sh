@@ -291,7 +291,7 @@ check_run() {
 
 # 三个变量不全则不安装哪吒客户端
 check_variable() {
-  [[ ( -z "\${NEZHA_SERVER}" || -z "\${NEZHA_PORT}" ) || -z "\${NEZHA_KEY}" ]] && exit
+  [[ -z "\${NEZHA_SERVER}" || -z "\${NEZHA_PORT}" || -z "\${NEZHA_KEY}" ]] && exit
 }
 
 # 下载最新版本 Nezha Agent
